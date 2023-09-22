@@ -28,6 +28,18 @@ let discord = [
 	'Justin',
 	'TimDesmet00',
 	'Valentin-Lefort'];
+  function calculateBrightness(color) {
+    // Parse la couleur en valeurs R, G et B
+    let match = color.match(/(\d+),\s*(\d+),\s*(\d+)/);
+    let r = parseInt(match[1]);
+    let g = parseInt(match[2]);
+    let b = parseInt(match[3]);
+  
+    // Calcule la luminosité Y en utilisant la formule YIQ
+    let brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return brightness;
+  }
+
   function randomColor(number) {
     return Math.floor(Math.random()*number)
   }
@@ -60,6 +72,12 @@ for (const item of discord) {
   if (backP > 127.5) {
     newP.style.color = 'white';
   }
+  let brightness = calculateBrightness(backP);
+
+  if (brightness < 127.5) {
+    newP.style.color = 'white';
+  }
+
   let textNode = document.createTextNode(item);
   newP.appendChild(textNode);
   section.appendChild(newP);
