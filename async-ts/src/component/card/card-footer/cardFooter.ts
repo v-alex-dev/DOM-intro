@@ -3,6 +3,7 @@ export const cardFooter = (permaLink:string, author:string) => {
   footer.classList.add('card-footer');
 
   const link = document.createElement('a');
+  
   link.href = permaLink;
   link.textContent = author;
 

@@ -1,12 +1,10 @@
-import { getAll } from "./function/getAllApi";
+
 import { mainHtml } from "./pages/main/main";
+import { btnStyle } from "./style/btnStyle";
 
 const body = document.body;
-
-const response = await getAll();
-const main = mainHtml(response);
+const main = mainHtml();
 body.appendChild(main);
-console.log(response);
-
+btnStyle('test');
 
 

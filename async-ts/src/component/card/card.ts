@@ -6,7 +6,19 @@ import { cardHeader } from "./card-header/cardHeader";
 
 export const card = (object: Quote) => {
   const card : HTMLElement  = document.createElement('article');
-  card.classList.add('card')
+  card.classList.add(
+    'card',
+    'w-1/2',
+    'text-center',
+    'flex', 
+    'flex-col',
+    'jsutify-content',
+    'mx-auto',
+    'mt-6',
+    'shadow-xl',
+    'rounded-lg',
+    'bg-fuchsia-100'
+  )
   card.id = 'card-exo';
 
   const author = object.author;
@@ -20,6 +32,8 @@ export const card = (object: Quote) => {
   card.appendChild(header);
   card.appendChild(body);
   card.appendChild(footer);
+
+  
 
   return card
 }
