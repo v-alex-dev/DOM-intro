@@ -1,0 +1,42 @@
+{
+  "nom": "Aerin Althor",
+  "race": "Humain",
+  "classe": "Mage",
+  "niveau": 5,
+  "points_de_vie": 35,
+  "points_de_mana": 45,
+  "caracteristiques": {
+    "force": 10,
+    "dexterite": 14,
+    "constitution": 12,
+    "intelligence": 18,
+    "sagesse": 16,
+    "charisme": 13
+  },
+  "competences": [
+    "Magie des éléments",
+    "Connaissance des arcanes",
+    "Maîtrise des sorts",
+    "Alchimie"
+  ],
+  "inventaire": [
+    {
+      "nom": "Bâton de mage",
+      "type": "Arme",
+      "degats": "1d6+1",
+      "description": "Un bâton gravé de symboles magiques."
+    },
+    {
+      "nom": "Robe de l'apprenti",
+      "type": "Armure légère",
+      "armure_classe": 10,
+      "description": "Une robe simple pour les mages en formation."
+    },
+    {
+      "nom": "Potion de soins",
+      "type": "Consommable",
+      "effet": "Soigne 2d4+2 points de vie.",
+      "description": "Une potion magique qui guérit les blessures."
+    }
+  ]
+}
